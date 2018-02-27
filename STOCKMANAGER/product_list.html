@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,14 +14,15 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/shopping_cart.css" rel="stylesheet">
+    <link href="css/product_list.css" rel="stylesheet">
     <link href="fonts/css/fontawesome-all.min.css" rel="stylesheet">
 
   </head>
 
   <body>
 
-    <!-- Navigation -->
+       
+   <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="homepage.html">GES</a>
@@ -39,9 +39,9 @@
             </form>
             <div class="dropdown">
                 <li class="dropdown-toggle">
-                  <a data-toggle="dropdown">User<span class="caret"></span></a>
+                  <a data-toggle="dropdown">Stock<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="shopping_cart.html">Shopping Cart</a></li>
+                      <li><a href="product_list.html">Product List</a></li>
                       <li><a href="../ANONYMOUS/homepage.html">Log Out</a></li>
                   </ul>
                 </li>
@@ -50,14 +50,15 @@
         </div>
       </div>
     </nav>
-<div class="container">
+
+    <div class="container">
 	<table id="cart" class="table table-hover table-condensed">
         <thead>
             <tr>
                 <th style="width:50%">Product</th>
 				<th style="width:10%">Price</th>
-				<th style="width:8%">Quantity</th>
-				<th style="width:22%" class="text-center">Subtotal</th>
+				<th style="width:22%" class="text-center">Added on</th>
+                <th style="width:18%" class="text-center">Rating</th>
 				<th style="width:10%"></th>
             </tr>
         </thead>
@@ -72,21 +73,21 @@
                     </div>
             </td>
             <td data-th="Price">$24.99</td>
-            <td data-th="Quantity">
-                <input type="number" class="form-control text-center" value="1">
-            </td>
-            <td data-th="Subtotal" class="text-center">24.99</td>
+            <td data-th="Subtotal" class="text-center">1/1/2018</td>
+            <td data-th="Rating" class="text-center">4.0</td>
             <td class="actions" data-th="">
-                <button class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i></button>								
+                <a href="edit_product.html"><button class="btn btn-info btn-sm"><i class="fa fa-edit"></i></button></a>	
+                <button class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i></button>
+                
             </td>
             </tr>
         </tbody>
         <tfoot>
 				<tr>
-				    <td><a href="homepage.html" class="btn"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+				    <td><a href="homepage.html" class="btn"><i class="fa fa-angle-left"></i> Go to Homepage</a></td>
 				    <td colspan="2" class="hidden-xs"></td>
-				    <td class="hidden-xs text-center"><strong>Total $24.99</strong></td>
-				    <td id="checkoutBtn"><a href="#" class="btn" >Checkout <i class="fa fa-angle-right"></i></a></td>
+				    <td class="hidden-xs text-center"><strong></strong></td>
+				    <td id="checkoutBtn"><a href="add_product.html" class="btn" >Add A Product <i class="fa fa-cart-plus"></i></a></td>
 				</tr>
         </tfoot>
     </table>

@@ -14,14 +14,15 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/register.css" rel="stylesheet">
+    <link href="css/create_account.css" rel="stylesheet">
     <link href="fonts/css/fontawesome-all.min.css" rel="stylesheet">
 
   </head>
 
   <body>
 
-    <!-- Navigation -->
+       
+  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="homepage.html">GES</a>
@@ -36,19 +37,24 @@
                     <i class="fa fa-search"></i>
                 </button>
             </form>
-            <li class="nav-item" id="Login">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="register.html">Sign Up</a>
-            </li>
+            <div class="dropdown">
+                <li class="dropdown-toggle">
+                  <a data-toggle="dropdown">Admin<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="product_list.html">Product List</a></li>
+                      <li><a href="create_account.html">Create Account</a></li>
+                      <li><a href="../ANONYMOUS/homepage.html">Log Out</a></li>
+                  </ul>
+                </li>
+            </div>
           </ul>
         </div>
       </div>
     </nav>
-      
-<div class="container" id="registerContainer">
-    <h2>Create New Account</h2>
+
+
+ <div class="container" id="createContainer">
+    <h2>Create New Administrative Account</h2>
     <br>
 	<div class="col-sm-12">
 	<div class="row">
@@ -72,10 +78,6 @@
 				    <div class="col-sm-8 form-group">
 				        <label>E-mail Address</label>
 				            <input type="text" placeholder="JohnDoe@gmail.com" class="form-control">
-				    </div>	
-				    <div class="col-sm-8 form-group">
-				        <label>Credit Card Number</label>
-				            <input type="text" placeholder="4111 1111 1111 1111" class="form-control">
 				    </div>	
 				</div>								
 				<div class="row">
@@ -101,22 +103,14 @@
                         </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12 form-group">
-                        <label>Shipping Address</label>
-                            <input type="text" placeholder="2401 Taft Avenue"  class="form-control">
-                    </div>	
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 form-group">
-                        <label>Secret Question</label>
+                    <div class="col-sm-4 form-group">
+                        <label>ROLE</label>
                         <div class="form-group">
                           <select class="form-control">
-                            <option>In what city or town does your nearest sibling live?</option>
-                            <option>What is the last name of the teacher who gave you your first failing grade?</option>
-                            <option>What was the name of your elementary / primary school?</option>
+                            <option>Stock Manager</option>
+                            <option>Administrator</option>
                           </select>
                         </div>
-                            <input type="text" placeholder="..." class="form-control">
                     </div>	
                 </div>
 				<button type="submit" class="btn btn-lg btn-info" id="btnSubmit">Submit</button>					
